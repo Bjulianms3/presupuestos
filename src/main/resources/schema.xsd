@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+targetNamespace="p.uv.mx/presupuestos"
+xmlns:tns="p.uv.mx/presupuestos"
+xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="presupuestoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id_dependencia" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   <xs:element name="presupuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="presupuesto" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="afectacionPresupuestalRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id_dependencia" type="xs:string" />
+        <xs:element name="valor" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="afectacionPresupuestalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="estado" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   <xs:element name="agregarpresupuestoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id_dependencia" type="xs:string" />
+        <xs:element name="valor_agregar" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   <xs:element name="agregarpresupuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mensaje" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="quitarpresupuestoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id_dependencia" type="xs:string" />
+        <xs:element name="valor_quitar" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   <xs:element name="quitarpresupuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mensaje" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
